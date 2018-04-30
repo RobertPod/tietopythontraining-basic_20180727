@@ -11,11 +11,14 @@ the variable holds '__main__' string.
 
 
 def main():
-    print('Hello world!')
+    print('Enter first number')
+    num1 = int(input())
+    print('Enter second number')
+    num2 = int(input())
+    print('Enter third number')
+    num3 = int(input())
+    print('Sum of three nubers is ' + str(num1 + num2 + num3))
 
 
 if __name__ == '__main__':
-    # `python hello_world.py` will run main(), `import hello_world` will not
     main()
-
-# `import hello_world` will still allow me to run `hello_world.main()`
