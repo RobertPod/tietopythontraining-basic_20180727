@@ -1,6 +1,6 @@
 import unittest
 
-from lesson_03_functions.src.modules.fibonacci_numbers import FibonacciNumbers, FibonacciNumbersException
+from ..modules.fibonacci_numbers import FibonacciNumbers, FibonacciNumbersException
 
 
 class MyTestCase(unittest.TestCase):
