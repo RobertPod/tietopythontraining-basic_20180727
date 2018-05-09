@@ -10,6 +10,20 @@ class TheBowlingAlley(object):
             raise BowlingException('ERROR: the rolls variable must be a nonnegative natural number')
 
         output_tab = ['I' for i in range(pins)]
+        if len(rolls_description) < rolls:
+            raise BowlingException(
+                'ERROR: wrong roll description, there are %s rols instead %s' % (len(rolls_description), rolls))
+
+        for i in range(rolls):
+            if len(rolls_description[i]) < 2:
+                raise BowlingException('ERROR: wrong roll description')
+            if rolls_description[i][0] <= 0 or rolls_description[i][0] > pins:
+                raise BowlingException('ERROR: wrong roll description')
+            if rolls_description[i][1] <= 0 or rolls_description[i][1] > pins:
+                raise BowlingException('ERROR: wrong roll description')
+
+            for j in range(rolls_description[i][0] - 1, rolls_description[i][1]):
+                output_tab[j] = '.'
 
         return output_tab
 
