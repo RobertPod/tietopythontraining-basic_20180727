@@ -24,6 +24,8 @@ def main():
     pieces = int(input())
 
     cb = ChocolateBar()
+    print(dir(cb))
+    print(__name__)
     if cb.possible(x_size, y_size, pieces):
         print('YES')
     else:
